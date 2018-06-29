@@ -58,4 +58,9 @@ config set requirepass 123.com
 
 > https://blog.csdn.net/lovejj1994/article/details/53096268
 
+- 关闭redis
+
+```
+./redis-cli -p 6379 -a 123.com shutdown
+```
 
