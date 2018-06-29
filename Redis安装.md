@@ -54,5 +54,8 @@ config set requirepass 123.com
 /etc/rc.d/init.d/iptables save
 ```
 
+- 开机自启配置
+
+> https://blog.csdn.net/lovejj1994/article/details/53096268
 
 
