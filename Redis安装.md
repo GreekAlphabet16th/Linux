@@ -47,5 +47,12 @@ redis-cli -p 6379
 ```
 config set requirepass 123.com
 ```
+- 防火墙 关闭6379端口
+
+```
+/sbin/iptables -I INPUT -p tcp --dport 6379 -j ACCEPT
+/etc/rc.d/init.d/iptables save
+```
+
 
 
