@@ -1,16 +1,16 @@
 #!/bin/sh
-#
+# 
 # Simple Redis init.d script conceived to work on Linux systems
 # as it does use of the /proc filesystem.
 # chkconfig:   2345 90 10
 # description:  Redis is a persistent key-value database
 
 REDISPORT=6379
-EXEC=/home/apk/redis-3.2.1/src/redis-server
-CLIEXEC=/home/apk/redis-3.2.1/src/redis-cli
+EXEC=/home/redis/redis-3.2.1/src/redis-server
+CLIEXEC=/home/redis/redis-3.2.1/src/redis-cli
 
 PIDFILE=/var/run/redis_${REDISPORT}.pid
-CONF="/home/apk/redis-3.2.1/redis.conf"
+CONF="/home/redis/redis-3.2.1/redis.conf"
 
 case "$1" in
     start)
@@ -29,7 +29,7 @@ case "$1" in
         else
                 PID=$(cat $PIDFILE)
                 echo "Stopping ..."
-                $CLIEXEC -p $REDISPORT shutdown
+                $CLIEXEC -a "123.com" -p $REDISPORT shutdown
                 while [ -x /proc/${PID} ]
                 do
                     echo "Waiting for Redis to shutdown ..."
