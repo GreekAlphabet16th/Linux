@@ -169,4 +169,9 @@ chkconfig –add redis
 
 
 
+- 关闭redis
+
+```
+./redis-cli -p 6379 -a 123.com shutdown
+```
 
